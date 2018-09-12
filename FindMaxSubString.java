@@ -1,54 +1,41 @@
+//This is wrong
 import java.lang.*;
 import java.util.*;
 
 public class FindMaxSubString{
 
   public static void main(String[] args){
-    System.out.println(findMaxSubString("abcda"));
+    System.out.println(findMaxSubString("abcdaefbg"));
   }
 
-  public static String findMaxSubString(String str){
-    Set<Character> set = new HashSet<>();
-    String longestTillNow = "";
-    String longestOverAll = "";
-    for(int i =0;i<str.length();i++){
-      Character c = str.charAt(i);
-      if(!set.contains(c)){
-        longestTillNow = longestTillNow+c.toString();
-        set.add(c);
-        if(longestTillNow.length()>longestOverAll.length()) longestOverAll = longestTillNow;
-      } else {
-        longestTillNow = "";
-        set.clear();
-      }
-    }
-    return longestOverAll;
+  public static int findMaxSubString(String str){
+    String s = str;
+    if(s==null||s.length()==0){
+           return 0;
+       }
+       int result = 0;
+       int k=0;
+       HashSet<Character> set = new HashSet<Character>();
+       for(int i=0; i<s.length(); i++){
+           char c = s.charAt(i);
+           if(!set.contains(c)){
+               set.add(c);
+               result = Math.max(result, set.size());
+           }else{
+               while(k<i){
+                   if(s.charAt(k)==c){
+                       k++;
+                       break;
+                   }else{
+                       set.remove(s.charAt(k));
+                       k++;
+                   }
+               }
+           }
+       }
+
+       return result;
 }
 
 
 }
-
-
-
-
-
-//temp
-Set<Character> set = new HashSet<>();
-String longestTillNow = "";
-String longestOverAll = "";
-for(int i =0;i<s.length();i++){
-  Character c = s.charAt(i);
-  if(set.contains(c)){
-    set.clear();
-    set.add(c);
-
-  } else {
-    //TODO
-      set.add(c);
-      longestTillNow = longestTillNow + c.toString();
-      if(longestTillNow>longestOverAll) {
-          longestOverAll = longestTillNow;
-      }
-  }
-}
-return longestOverAll.length();

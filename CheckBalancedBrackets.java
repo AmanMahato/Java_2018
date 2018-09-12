@@ -18,11 +18,7 @@ public class CheckBalancedBrackets{
     }
   }
   }
-  if(stack.isEmpty()){
-    return true;
-  } else {
-    return false;
-  }
+  return stack.isEmpty();
 }
 
   public Boolean isMatchingPair(Character c1, Character c2){
