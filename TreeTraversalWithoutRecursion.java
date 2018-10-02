@@ -54,8 +54,8 @@ public class TreeTraversalWithoutRecursion{
         stack.push(current);
         current = current.left;
       }
-      Node temp = stack.pop();
-      System.out.println(temp.val);
+      current = stack.pop();
+      System.out.println(current.val);
       current = current.right;
     }
   }
@@ -79,4 +79,5 @@ public class TreeTraversalWithoutRecursion{
       System.out.println(stack2.pop().val);
     }
   }
+
 }
