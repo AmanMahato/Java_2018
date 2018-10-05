@@ -9,7 +9,7 @@ public class ContigiousSubSeq{
   }
 
   public static boolean isPossible(int[] input, int value){
-    Arrays.sort(input);
+    //Arrays.sort(input);
     for(int i=0;i<input.length;i++){
       int sum = 0;
       int j = i;

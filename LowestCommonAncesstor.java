@@ -1,3 +1,4 @@
+//if BST
 public class LowestCommonAncesstor{
 
   static class Node{
@@ -25,7 +26,6 @@ public class LowestCommonAncesstor{
   }
 
   static Node getLCA(Node node, int val1, int val2){
-    //TODO
     if(node==null) return null;
     if(val1>node.data && val2>node.data){
       return getLCA(node.right,val1, val2);

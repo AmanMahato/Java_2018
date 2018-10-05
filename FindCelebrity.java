@@ -1,12 +1,13 @@
 import java.lang.*;
 import java.util.*;
-//neeed tp be fixed
+//neeed to be fixed
 public class FindCelebrity{
 
   static int MATRIX[][] = { { 0, 0, 1, 0 },
-            { 0, 0, 1, 0 },
-            { 0, 0, 0, 0 },
-            { 0, 0, 1, 0 } };
+                            { 0, 0, 1, 0 },
+                            { 0, 0, 0, 0 },
+                            { 0, 0, 1, 0 }
+                          };
 
   public static void main(String[] args){
     int n = 4;
@@ -38,7 +39,7 @@ public class FindCelebrity{
       }
     }
     int last = stack.pop();
-    System.out.println(last);
+    //System.out.println(last);
     for(int i=0;i<n;i++){
       if((i!=last && knows(last,i)) || !knows(i,last)){
         return -1;

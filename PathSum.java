@@ -16,6 +16,7 @@ public List<List<Integer>> pathSum(TreeNode root, int sum) {
     return result;
 }
 
+//concept of backtracking is used
 void pathSumHelper(TreeNode root, int sum, List<List<Integer>> result, List<Integer> temp){
     if(root==null) return;
     temp.add(root.val);

@@ -14,6 +14,8 @@ class WordBreak {
         return DFS(s,wordDict, new HashMap<String, LinkedList<String>>());
     }
 
+
+    //Helper Function
     public List<String> DFS(String s, List<String> wordDict, HashMap<String, LinkedList<String>>map) {
 
     if (map.containsKey(s)){
@@ -38,4 +40,5 @@ class WordBreak {
     map.put(s, res);
     return res;
   }
+
 }

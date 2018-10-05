@@ -1,55 +1,70 @@
-import java.lang.*;
-import java.util.*;
+class Trie {
 
-public class Trie{
-
-  public static void main(String args){
-    System.out.println("Hello");
-    //add("aman");
-    //System.out.println(isPresent("ama"));
-    //System.out.println(isPresent("aman"));
-  }
-
-  static class TrieNode{
-    TrieNode[] children = new TrieNode[26];
-    boolean isEnd;
-    TrieNode(){
-      Arrays.fill(children,null);
-      isEnd = false;
+    static class TrieNode{
+        char val;
+        boolean isEnd;
+        TrieNode[] children = new TrieNode[26];
+        TrieNode(){};
+        TrieNode(char c){
+            this.val = c;
+            TrieNode node = new TrieNode();
+        }
     }
-  }
 
-  static TrieNode root;
-
-
-
-  static void add(String str){
-    int length = str.length();
-    int index;
-    TrieNode crawl = root;
-    for(int i=0;i<length;i++){
-      index = str.charAt(i)-'a';
-      if(crawl.children[index]!=null){
-        continue;
-      } else {
-        crawl = new TrieNode();
-        crawl = crawl.children[index];
-      }
-      crawl.isEnd = true;
+    TrieNode root;
+    /** Initialize your data structure here. */
+    public Trie() {
+        root = new TrieNode();
+        root.val = ' ';
     }
-  }
 
-  static boolean isPresent(String key){
-    int length = key.length();
-    int level = 0;
-    int index;
-    TrieNode crawl = root;
-    for(int i=0;i<length;i++){
-      index = key.charAt(i)-'a';
-      if(crawl.children[index]==null) return false;
-      crawl = crawl.children[index];
+    /** Inserts a word into the trie. */
+    public void insert(String word) {
+        word = word.toLowerCase();
+        TrieNode crawler = root;
+        for(int i=0;i<word.length();i++){
+            int index = word.charAt(i)-'a';
+            if(crawler.children[index]==null){
+                crawler.children[index] = new TrieNode(word.charAt(i));
+            }
+            crawler = crawler.children[index];
+        }
+        crawler.isEnd = true;
     }
-    return (crawl!=null && crawl.isEnd);
-  }
 
+    /** Returns if the word is in the trie. */
+    public boolean search(String word) {
+        word = word.toLowerCase();
+        TrieNode crawler = root;
+        for(int i=0;i<word.length();i++){
+            int index = word.charAt(i)-'a';
+            if(crawler.children[index]==null){
+                return false;
+            }
+            crawler = crawler.children[index];
+        }
+        return (crawler.isEnd);
+    }
+
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    public boolean startsWith(String prefix) {
+        prefix = prefix.toLowerCase();
+        TrieNode crawler = root;
+        for(int i=0;i<prefix.length();i++){
+            int index = prefix.charAt(i)-'a';
+            if(crawler.children[index]==null){
+                return false;
+            }
+            crawler = crawler.children[index];
+        }
+        return true;
+    }
 }
+
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie obj = new Trie();
+ * obj.insert(word);
+ * boolean param_2 = obj.search(word);
+ * boolean param_3 = obj.startsWith(prefix);
+ */

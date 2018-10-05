@@ -8,6 +8,12 @@ public class RotateMatrix {
                 matrix[len-j-1][i] = matrix[len-i-1][len-j-1];
                 matrix[len-i-1][len-j-1] = matrix[j][len-i-1];
                 matrix[j][len-i-1] = temp;
+
+                //TODO
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[len-j-1][i];
+                matrix[len-j-1][i] = matrix[len-i-1][len-j-1];
+                matrix[len-i-1][len-j-1] = matrix[j][len-i-1]
             }
         }
 

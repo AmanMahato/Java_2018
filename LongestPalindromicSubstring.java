@@ -7,21 +7,22 @@ public class LongestPalindromicSubstring{
   }
 
   public static String getLongestPalindrome(String str){
-    System.out.println("1");
     int maxLength = 1;
     int start = 0;
     int len = str.length();
     //int low=0;
     //int high=0;
     for(int i=1;i<len;i++){
-      System.out.println("2");
-      //even
+
+
       int low=i-1;
       int high=i;
+
+      //even
       while(low>=0 && high<len && str.charAt(low)==str.charAt(high)){
-        System.out.println("3");
+        //System.out.println("3");
         if(maxLength<(high-low+1)){
-          System.out.println("4");
+          //System.out.println("4");
           start = low;
           maxLength = high-low+1;
         }
@@ -40,6 +41,8 @@ public class LongestPalindromicSubstring{
         low--;
         high++;
       }
+
+
     }
 
     return str.substring(start,start+maxLength);

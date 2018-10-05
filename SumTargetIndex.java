@@ -2,7 +2,7 @@ public class SumTargetIndex {
 
   public static void main(String[] args){
     SumTargetIndex testObj = new SumTargetIndex();
-    System.out.println(testObj.twoSum(new int[]{2,7,11,15},9))
+    System.out.println(testObj.twoSum(new int[]{2,7,11,15},9));
   }
 
   public int[] twoSum(int[] nums, int target) {

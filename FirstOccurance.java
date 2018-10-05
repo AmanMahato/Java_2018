@@ -21,7 +21,6 @@ public class FirstOccurance{
       } else {
         low = mid + 1;
       }
-
     }
     return result;
   }
