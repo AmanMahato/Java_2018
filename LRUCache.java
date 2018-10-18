@@ -61,7 +61,6 @@ class LRUCache {
             remove(temp);
             temp.value = value;
             setHead(temp);
-            //map.put(key,temp);
         } else {
             DLList newNode = new DLList(key,value);
             if(map.size()>=capacity){
@@ -75,10 +74,3 @@ class LRUCache {
         }
     }
 }
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */

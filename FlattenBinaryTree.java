@@ -39,10 +39,10 @@ public class FlattenBinaryTree{
       while(!stack.isEmpty()){
         BinaryTree current = stack.pop();
         if(current.right!=null){
-          stack.push(tree.right);
+          stack.push(current.right);
         }
         if(current.left!= null){
-          stack.push(tree.left);
+          stack.push(current.left);
         }
         if(!stack.isEmpty()){
           current.right = stack.peek();

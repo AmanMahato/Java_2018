@@ -1,9 +1,11 @@
+import java.util.*;
+import java.lang.*;
 public class LongestPalindromicSubstring{
 
   public static void main(String[] args){
     System.out.println(getLongestPalindrome("forgeeksskeegfor"));//geeksskeeg-->10
     System.out.println(getLongestPalindrome("aman"));
-
+    System.out.println(longestPossiblePalindrome("forgeeksskeegfor"));
   }
 
   public static String getLongestPalindrome(String str){
@@ -46,6 +48,21 @@ public class LongestPalindromicSubstring{
     }
 
     return str.substring(start,start+maxLength);
+  }
+
+//This question is completely different from the upper one, this one makes the longest possible palindrome from the given word
+  public static int longestPossiblePalindrome(String s){
+    int count = 0;
+    Set<Character> set = new HashSet<Character>();
+    for(int i=0;i<s.length();i++){
+      if(!set.contains(s.charAt(i))){
+        set.add(s.charAt(i));
+      } else {
+        count ++ ;
+        set.remove(s.charAt(i));
+    }
+  }
+  return (set.isEmpty() ? (count*2) : (count *2)+1);
   }
 
 }
