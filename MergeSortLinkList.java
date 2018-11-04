@@ -4,6 +4,7 @@ public class MergeSortLinkList{
 
   }
 
+  //Not constant space as it uses recirsion()
   public ListNode sortList(ListNode head) {
     if (head == null || head.next == null)
       return head;

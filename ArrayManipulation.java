@@ -4,8 +4,8 @@
 public class ArrayManipulation{
 
   public static void main(String[] args){
-    int[] input = new int[]{4,0,3,2,0};
-    manipuateArray(input);
+    int[] input = new int[]{4,0,3,0,0,2,0,9};
+    manipuateArray1(input);
     for(Integer i : input){
       System.out.print(i+" ");
     }
@@ -20,6 +20,16 @@ public class ArrayManipulation{
         j++;
       }
       input[j] = key;
+    }
+  }
+
+  static void manipuateArray1(int[] input){
+    int position = 0;
+    for(int i=0;i<input.length;i++){
+      if(input[i]!=0) input[position++] = input[i];
+    }
+    while(position<input.length){
+      input[position++] = 0;
     }
   }
 }

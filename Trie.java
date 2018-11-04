@@ -7,7 +7,7 @@ class Trie {
         TrieNode(){};
         TrieNode(char c){
             this.val = c;
-            TrieNode node = new TrieNode();
+            //TrieNode node = new TrieNode();
         }
     }
 

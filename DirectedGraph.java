@@ -105,8 +105,8 @@ public class DirectedGraph{
 
 //Done using backedge check
   public static boolean isCyclicDirected(GraphNode node){
-    boolean[] visited = new boolean[GRAPH_SIZE];
-    boolean[] recStack = new boolean[GRAPH_SIZE];
+    boolean[] visited = new boolean[GRAPH_SIZE]; //black set //white set --> set of input, stored as 0 to GRAPH_SIZE-1
+    boolean[] recStack = new boolean[GRAPH_SIZE];  //grey set
     for(int i=0;i<GRAPH_SIZE;i++){
       //if(!visited[i]){
         if(isCyclicDirectedUtil(node,i,visited,recStack)){
@@ -175,7 +175,7 @@ public class DirectedGraph{
         System.out.println(stack.pop());
       }
   }
-
+  //actually there are two stack, one internal stack is created by recursive call of the function.
   public static void topologicalSortUtil(GraphNode node, int i, boolean[] visited, Stack<Integer> stack){
       visited[i] = true;
       Iterator<Integer> itr = node.adj.get(i).iterator();
