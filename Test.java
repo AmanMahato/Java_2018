@@ -34,9 +34,30 @@ public class Test {
         return new int[]{0,0};
     }
 
+    public int search(int[] nums, int target) { //i/p : -1,0,3,5,9,12 -->9
+    if(nums.length==0 || nums==null) return -1;
+    //Arrays.sort(nums); -->Assuming Input will already be sorted
+    int result = -1;
+    int low = 0;
+    int high = nums.length-1;
+    while(low<=high){
+        int mid = low+(high-low)/2;
+        System.out.println(mid);
+        if(nums[mid]==target){
+            return mid;
+        } else if(target>nums[mid]){
+            low = mid+1;
+        } else {
+            high = mid-1;
+        }
+    }
+    return result;
+}
+
     public static void main(String[] args){
       Test test = new Test();
-      int[] result = test.primesum(7);
-      System.out.println(result[0]+" "+result[1]);
+      //int[] result = test.primesum(7);
+      //System.out.println(result[0]+" "+result[1]);
+      System.out.println("Binary Search: "+test.search(new int[]{-1,0,3,5,9,12},9));
     }
 }
