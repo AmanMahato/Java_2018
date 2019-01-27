@@ -21,7 +21,7 @@ public int[] merge(int[][] arrays) {
     int size = 0;
     for (int i = 0; i < arrays.length; i++) {
         size += arrays[i].length;
-        if (arrays[i].length > 0) {
+        if (arrays[i].length > 0) {//int array, int index, int value
             pq.add(new QueueNode(i, 0, arrays[i][0]);
         }
     }

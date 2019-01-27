@@ -21,3 +21,5 @@ public class ContigiousSubSeq{
     return false;
   }
 }
+
+//Think of queue ds. Might work

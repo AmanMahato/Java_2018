@@ -18,18 +18,20 @@ public class CoinChange{
 public int coinChange(int[] coins, int amount) {
     int T[] = new int[amount + 1];
     //int R[] = new int[total + 1];
+    Arrays.fill(T,Integer.MAX_VALUE);
     T[0] = 0;
-    for(int i=1; i <= amount; i++){
-        T[i] = Integer.MAX_VALUE-1;
+    //for(int i=1; i <= amount; i++){
+        //T[i] = Integer.MAX_VALUE-1;
        // R[i] = -1;
-    }
+    //}
     for(int j=0; j < coins.length; j++){
         for(int i=1; i <= amount; i++){
             if(i >= coins[j]){
-                if (T[i - coins[j]] + 1 < T[i]) {
-                    T[i] = 1 + T[i - coins[j]];
+                //if (T[i - coins[j]] + 1 < T[i]) {
+                    //T[i] = 1 + T[i - coins[j]];
                     //R[i] = j;
-                }
+                //}
+                T[i] = Math.min(T[i],T[i-coins[j]]+1);
             }
         }
     }

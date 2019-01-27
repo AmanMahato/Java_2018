@@ -25,6 +25,7 @@ public class LowestCommonAncesstor{
       System.out.println(getLCA(testObj,10,22).data);
   }
 
+//BST
   static Node getLCA(Node node, int val1, int val2){
     if(node==null) return null;
     if(val1>node.data && val2>node.data){
@@ -35,4 +36,14 @@ public class LowestCommonAncesstor{
     }
     return node;
   }
+
+  //Binary Tree (Copied)
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if(root == null || p==root || q==root) return root;
+    TreeNode left = lowestCommonAncestor(root.left,p,q);
+    TreeNode right = lowestCommonAncestor(root.right,p,q);
+    if(left != null && right != null) return root;
+    return (left!=null ? left : right);
+}
+
 }

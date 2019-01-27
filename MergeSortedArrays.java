@@ -32,7 +32,14 @@ public class MergeSortedArrays{
       System.out.println(i);
     }
     System.out.println();
-    System.out.println("Printing the kth largest element: ",getKthLargest(result,3));
+    System.out.println("Printing the kth largest element: ",getKthLargest(new int[]{9,4,883,23343,1,354,-98,422},3));
+  }
+
+  public static int getKthLargest(int[] input, int k){
+    //build min heap of size k
+    //pass the element from k+1 to n-1 , where n is input size
+    //return root of the heap
+
   }
 
   public static int[] getSortedArray(int[][] input){

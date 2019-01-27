@@ -1,5 +1,6 @@
 public class InsertIntoBst{
 
+//Note : The insertion is happening at end only in all the cases.
 public TreeNode insertIntoBST(TreeNode root, int val) {
   if(root == null) {
       root = new TreeNode(val);
@@ -17,7 +18,7 @@ public TreeNode insertIntoBST(TreeNode root, int val) {
 //code to inset in Binary Tree
 static void insert(Node temp, int key)
 {
-    Queue<Node> q = new LinkedList<Node>(); 
+    Queue<Node> q = new LinkedList<Node>();
     q.add(temp);
 
     // Do level order traversal until we find

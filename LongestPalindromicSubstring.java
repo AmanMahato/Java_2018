@@ -51,7 +51,7 @@ public class LongestPalindromicSubstring{
   }
 
 //This question is completely different from the upper one, this one makes the longest possible palindrome from the given word
-  public static int longestPossiblePalindrome(String s){
+  public static int longestPossiblePalindrome(String s){ //i/p->forgeeksskeegfor--[]
     int count = 0;
     Set<Character> set = new HashSet<Character>();
     for(int i=0;i<s.length();i++){

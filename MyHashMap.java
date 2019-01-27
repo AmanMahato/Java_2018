@@ -15,7 +15,7 @@ public class MyHashMap {
     private Entry[] table;
 
     public MyHashMap() {
-        table = new Entry[SIZE];
+      table = new Entry[SIZE];
     }
 
     public void put(String key, String value) {

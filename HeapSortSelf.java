@@ -25,7 +25,7 @@ public class HeapSortSelf{
     }
   }
 
-  static void heapify(int[] input, int i, int n){
+  static void heapify(int[] input, int i, int n){ //n is lenght of array
     int left = (2*i)+1;
     int right = (2*i)+2;
     int largest = i;
