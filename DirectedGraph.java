@@ -135,7 +135,7 @@ public class DirectedGraph{
     return false;
   }
 
-//done using parent check
+//done using parent check (For every visited vertex 'v' if there is adjacent 'u' such that u is already visited but not parent of v then there is a cycle in a graph)
   public static boolean isCyclicUndirected(GraphNode node){
     boolean[] visited = new boolean[GRAPH_SIZE+1];
     for(int i=0;i<GRAPH_SIZE+1;i++){

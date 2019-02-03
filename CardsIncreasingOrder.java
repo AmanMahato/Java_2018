@@ -44,7 +44,6 @@ public class CardsIncreasingOrder {
             if(!queue.isEmpty()){
                 queue.add(queue.poll());
             }
-
         }
         return ans;
     }

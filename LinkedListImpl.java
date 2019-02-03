@@ -73,6 +73,19 @@ public class LinkedListImpl{
   		return reversedList;
   }
 
+ //Copied from Leetcode  1 → 2 → 3 → Ø --> Ø ← 1 ← 2 ← 3
+ public ListNode reverseList(ListNode head) {
+       ListNode prev = null;
+       ListNode current = head;
+       while(current!=null){
+           ListNode nextOfCurrent = current.next;
+           current.next = prev;
+           prev = current;
+           current = nextOfCurrent;
+       }
+       return head;
+   }
+
   public static int sizeOfList(Node head){
     int count = 0;
     if (head == null) return count;

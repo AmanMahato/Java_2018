@@ -19,16 +19,24 @@ public class BackSpace {
   public static boolean isEqual(String str1,String str2){
     int len1 = str1.length()-1;
     int len2 = str2.length()-1;
+    int count1=0;
+    int count2=0;
     if(len1>=0 && str1.charAt(len1)!='*' && len2>=0 && str2.charAt(len2)!='*'){
       if(str1.charAt(len1)!=str2.charAt(len2)){
         return false;
       } else {
       while(len1>=0 && str1.charAt(len1)=='*'){
         len1--;
+        count1++;
       }
       while(len2>=0 && str2.charAt(len2)=='*'){
         len2--;
+        count2++;
       }
+      len1 = len1-count1;
+      len2 = len2 - count2;
+      count1 = 0;
+      count2 = 0;
     }
   }
   return true;
