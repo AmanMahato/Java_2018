@@ -13,6 +13,7 @@ public class Codec {
         return serializeHelper(root,"");
     }
 
+    //Doing PreOrder
     private String serializeHelper(TreeNode root, String str){
         if (root == null){
             str +="null,";
@@ -22,10 +23,8 @@ public class Codec {
         str += root.val + ",";
         str = serializeHelper(root.left, str);
         str = serializeHelper(root.right, str);
-        System.out.println(str);
+        //System.out.println(str);
         return str;
-
-
     }
 
     // Decodes your encoded data to tree.
@@ -40,17 +39,13 @@ public class Codec {
             list.remove(0);
             return null;
         }
-
         int val = Integer.valueOf(list.get(0));
         TreeNode root = new TreeNode(val);
         list.remove(0);
-
         root.left = desHelper(list);
         root.right = desHelper(list);
-
         return root;
     }
-
 }
 
 // Your Codec object will be instantiated and called as such:

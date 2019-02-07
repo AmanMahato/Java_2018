@@ -25,12 +25,12 @@ public class MinCostPath{
     int[][] dpArray = new int[m+1][n+1];
     dpArray[0][0] = input[0][0];
 
-    //col
+    //1st col
     for(int i=1;i<=m;i++){
       dpArray[i][0] = dpArray[i-1][0]+input[i][0];
     }
 
-    //row
+    //1st row
     for(int j=1;j<=n;j++){
       dpArray[0][j] = dpArray[0][j-1]+input[0][j];
     }

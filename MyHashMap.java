@@ -65,13 +65,13 @@ public class MyHashMap {
     private void addOrUpdateNode(Entry head, Entry node) {
         Entry prev = head;
         while (head != null) {
-            if (head.key.equals(node.key)) {
+            if (head.key.equals(node.key)) { //updation part
                 head.value = node.value;
                 return;
             }
             prev = head;
             head = head.next;
         }
-        prev.next = node;
+        prev.next = node; //add part
     }
 }

@@ -28,7 +28,6 @@ TreeNode next(){
     pushAll(temp.right);
     return temp;
 }
-
 }
 
 //2nd Solution

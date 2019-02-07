@@ -12,6 +12,7 @@ public class HeapSortSelf{
     }
   }
 
+//Note: Building max heap for ascending order
   static void heapSort(int[] input){
     int len = input.length;
     for(int i=(len/2)-1;i>=0;i--){
@@ -25,6 +26,7 @@ public class HeapSortSelf{
     }
   }
 
+  //For Max Heap
   static void heapify(int[] input, int i, int n){ //n is lenght of array
     int left = (2*i)+1;
     int right = (2*i)+2;
@@ -39,7 +41,7 @@ public class HeapSortSelf{
       int temp = input[i];
       input[i] = input[largest];
       input[largest] = temp;
-      heapify(input,largest,n);
+      heapify(input,largest,n); //going up in a bottom up way
     }
   }
 

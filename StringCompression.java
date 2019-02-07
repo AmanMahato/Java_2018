@@ -1,3 +1,4 @@
+// i/p --> ["a","a","b","b","c","c","c","c"] o/p-->["a","2","b","2","c","4"]
 public class StringCompression{
 
 public int compress(char[] chars) {
@@ -14,9 +15,7 @@ public int compress(char[] chars) {
                 for(char c : Integer.toString(count).toCharArray())
                     chars[indexAns++] = c;
         }
-        System.out.println(chars[indexAns+1]);
         return indexAns;
-
     }
 
 }

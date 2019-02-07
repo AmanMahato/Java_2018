@@ -1,3 +1,4 @@
+//largest sum --> contigious subarray. Do in O(n).
 public class MaximumSubArray{
 
   public static void main(String[] args){

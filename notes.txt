@@ -1,0 +1,43 @@
+NOTES:
+
+Functional Programming:
+A pure function is a function that given the same type of input will always return the same output,
+it is not dependent on a local or global state.
+  Major Principal is avoid mutable state.
+  - Input to function is immumatable
+  - Function doesnot invole in modifying anything (variables) outside of its scope
+  - Code in Declerative style
+  - Reducing Concurrency issue
+
+  Functional programming
+Put very simply, functional programming is a language that focuses on the computation of pure functions. The keyword there is ‘pure’ — everything revolves around keeping everything ‘pure’. What exactly do we mean by pure?
+
+There is a complete separation between the data of a program, and the behaviors of a program
+All objects created in functional programming are immutable (once something is created, it can’t be changed)
+Shared state is avoided (objects do not share scope with other objects)
+Adherence to pure functions (explained below)
+Pure functions
+A pure function is a function where:
+
+The return value only depends on the input (if you input the same value, you will always return the same value)
+There are no side effects (for example: no network or database calls which could affect the return value)
+They do not alter the data that was passed into them. We only want to describe how the input will be changed (think destructive vs non-destructive)
+Here are some examples of an impure function:
+
+function number(num){
+  num * Math.random()
+}
+function hello(greeting){
+  console.log(greeting)
+}
+var totalPeople = 10
+function totalVotes(votes){
+ return votes * totalPeople
+}
+The outcome of number has nothing to do with what we input into it with num, as it is multiplying the input with a random number. Not pure! With pure functions, we ONLY care about return values. So, the function hello isn’t pure in the fact that it is creating a ‘side-effect’, which is the console logging. The function totalVotes depends on a variable outside of its scope (shared state!), which is a no no!
+
+Here’s an example of a pure function:
+
+function plusTwo(num){
+  return num + 2
+}

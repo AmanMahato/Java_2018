@@ -13,11 +13,10 @@ public void dfs(char[][] board, int i, int j, TrieNode p, List<String> res) {
     char c = board[i][j];
     if (c == '#' || p.next[c - 'a'] == null) return;
     p = p.next[c - 'a'];
-    if (p.word != null) {   // found one
+    if (p.word ! = null) {   // found one
         res.add(p.word);
         p.word = null;     // de-duplicate
     }
-
     board[i][j] = '#';
     if (i > 0) dfs(board, i - 1, j ,p, res);
     if (j > 0) dfs(board, i, j - 1, p, res);

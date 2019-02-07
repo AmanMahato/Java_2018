@@ -3,6 +3,7 @@
 public class MinWinSubString {
 
     public static void main(String[] args){
+                                  // main          target
       System.out.println(minWindow("ADOBECODEBANC", "ABC"));
     }
 
@@ -21,6 +22,7 @@ public class MinWinSubString {
         int startingPoint =-1;
         for(int j=0;j<lenMain;j++){
             main[s.charAt(j)]++;
+            // check i. main character present in target ii. if yes, we need more character to fulfill demand of target, keep increasing the count
             if(target[s.charAt(j)]!=0 && target[s.charAt(j)]>=main[s.charAt(j)]){
                 count ++;
             }

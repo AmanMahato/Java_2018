@@ -15,8 +15,6 @@ public class LongestPalindromicSubstring{
     //int low=0;
     //int high=0;
     for(int i=1;i<len;i++){
-
-
       int low=i-1;
       int high=i;
 
