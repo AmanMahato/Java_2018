@@ -3,8 +3,6 @@ import java.util.*;
 
 public class Delete { //implements Iterable<Integer> {
 
-
-
   public static void main(String[] args){
     //Delete del = new Delete(new String[]{"Aman","Kumar","Mahato"}, new Integer[]{1,2,3});
     //del.forEach(x->System.out.println(x));

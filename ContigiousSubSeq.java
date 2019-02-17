@@ -1,4 +1,5 @@
-//2. Given an unsorted array of positive integers, and a value. Return True/False if a contiguous sequence of numbers can sum upto that value.
+//2. Given an unsorted array of positive integers, and a value. Return True/False if a contiguous sequence of numbers
+//can sum upto that value.
 import java.util.*;
 import java.lang.*;
 
@@ -48,7 +49,7 @@ int subArraySum(int arr[], int n, int sum)
 
             // Add this element to curr_sum
             if (i < n)
-            curr_sum = curr_sum + arr[i]; 
+            curr_sum = curr_sum + arr[i];
 
         }
 

@@ -26,7 +26,6 @@ static void insert(Node temp, int key)
     while (!q.isEmpty()) {
         temp = q.peek();
         q.remove();
-
         if (temp.left == null) {
             temp.left = new Node(key);
             break;

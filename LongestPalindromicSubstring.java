@@ -33,7 +33,7 @@ public class LongestPalindromicSubstring{
       //odd
       low=i-1;
       high=i+1;
-      while(low>=0 && high<len && str.charAt(low)==str.charAt(high)){
+      while(low>=0 && high<len && str.charAt(low) == str.charAt(high)){
         if(maxLength<(high-low+1)){
           start = low;
           maxLength = high-low+1;
