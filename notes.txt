@@ -4,9 +4,9 @@ Functional Programming:
 A pure function is a function that given the same type of input will always return the same output,
 it is not dependent on a local or global state.
   Major Principal is avoid mutable state.
-  - Input to function is immumatable
-  - Function doesnot invole in modifying anything (variables) outside of its scope
-  - Code in Declerative style
+  - Input to function is immutable
+  - Function does not involve in modifying anything (variables) outside of its scope
+  - Code in declarative style
   - Reducing Concurrency issue
 
   Functional programming
