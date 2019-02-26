@@ -57,7 +57,8 @@ class LRUCache {
 
     public void put(int key, int value) {
         if(map.containsKey(key)){
-            DLList temp = map.get(key);
+            DLList temp = map.get(key); //This get call internally calls remove and setHead but thats not our use containsKey
+                                        //We have to manually call this and pass our own node to create a new one, next line
             remove(temp);
             temp.value = value;
             setHead(temp);

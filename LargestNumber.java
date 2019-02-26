@@ -32,3 +32,5 @@ public String largestNumber(int[] nums) {
  }
 
 }
+
+[5,6,3,6]-->6653

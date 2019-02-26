@@ -2,7 +2,7 @@ public class MyHashMap {
     private static final int SIZE = 32;
 
     class Entry {
-        String key;
+        final String key;
         String value;
         Entry next;
         Entry(String key, String value) {
