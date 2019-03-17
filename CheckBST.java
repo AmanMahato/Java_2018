@@ -25,11 +25,11 @@ static boolean isBST(Node root){
     if(!isBST(root.left)){
       return false;
     }
-    if(prev!=null && node.data<=prev.data){
+    if(prev!=null && root.data<=prev.data){
       return false;
     }
-    prev = node;
-    return (isBST(node.right));
+    prev = root;
+    return (isBST(root.right));
   }
   return  true;
 }

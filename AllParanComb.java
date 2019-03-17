@@ -22,7 +22,6 @@ public List<String> generateParenthesis(int n) {
 					 list.add(str);
 					 return;
 			 }
-
 			 if(open < max)
 					 backtrack(list, str+"(", open+1, close, max);
 			 if(close < open)
