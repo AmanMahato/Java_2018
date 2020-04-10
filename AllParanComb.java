@@ -5,7 +5,7 @@ import java.util.*;
 
 public class AllParanComb {
 
-	public static void main(String[] args){
+public static void main(String[] args){
 		List<String> result = new AllParanComb().generateParenthesis(3);
 	}
 
@@ -16,7 +16,6 @@ public List<String> generateParenthesis(int n) {
 	 }
 
 	 public void backtrack(List<String> list, String str, int open, int close, int max){
-
 			 if(str.length() == max*2){
 				 	 System.out.println(str);
 					 list.add(str);

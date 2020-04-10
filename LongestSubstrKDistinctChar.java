@@ -8,7 +8,7 @@ public class LongestSubstrKDistinctChar
 
 	// Function to find longest substring of given string containing
 	// k distinct characters using sliding window
-	public static String LongestSubstrKDistinctChar(String str, int k)
+	public static String longestSubstrKDistinctChar(String str, int k)
 	{
 		// stores longest substring boundaries
 		int end = 0, begin = 0;
@@ -57,7 +57,7 @@ public class LongestSubstrKDistinctChar
 		String str = "abcbdbdbbdcdabd";
 		int k = 2;
 
-		System.out.print(LongestSubstrKDistinctChar(str, k));
+		System.out.print(longestSubstrKDistinctChar(str, k));
 
 	}
 }

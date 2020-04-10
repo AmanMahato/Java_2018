@@ -1,8 +1,8 @@
 public class MaxPathSum {
-    int maxValue;
+
+    int maxValue = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
-        maxValue = Integer.MIN_VALUE;
         maxPathDown(root);
         return maxValue;
     }

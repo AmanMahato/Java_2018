@@ -55,6 +55,7 @@ public class LinkedListImpl{
 
   public static Node removeElement(Node head, int element){
     if(head == null) return head;
+    if(head.val == element) return null;
     Node result = head;
     while(head.next!=null){
       if(head.next.val == element){

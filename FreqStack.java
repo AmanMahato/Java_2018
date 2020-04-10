@@ -1,6 +1,6 @@
 public class FreqStack {
 
-    Map<Integer,Integer> freq;
+  Map<Integer,Integer> freq;
     Map<Integer, Stack<Integer>> group;
     int maxFreq;
 
@@ -29,7 +29,7 @@ public class FreqStack {
     public int pop() {
         int result = group.get(maxFreq).pop();
         freq.put(result,freq.get(result)-1);
-        if(group.get(result).size()==0) maxFreq--;
+        if(group.get(maxFreq).size()==0) maxFreq--;
         return result;
     }
 }

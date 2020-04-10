@@ -1,4 +1,5 @@
 public class RotatedArrayMinimum {
+
   public int findMin(int[] nums) {
     // If the list has just one element then return that element.
     if (nums.length == 1) {
